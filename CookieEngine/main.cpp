@@ -10,6 +10,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
+#include "Vector3.h"
 
 int main(int argc, const char * argv[]) {
     GLFWwindow* window;
