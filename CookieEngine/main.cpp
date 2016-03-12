@@ -9,8 +9,7 @@
 #include <iostream>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-#include "Vector3.h"
-#include "Matrix4.h"
+#include "CookieMath.h"
 
 int main(int argc, const char * argv[]) {
     GLFWwindow* window;
