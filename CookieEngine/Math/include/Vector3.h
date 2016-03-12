@@ -13,6 +13,9 @@
 
 namespace CookieEngine
 {
+// Forward declaration to avoid circular dependency
+class Matrix4;
+    
 // 3D vector class using SSE4.1
 class Vector3
 {
@@ -206,11 +209,14 @@ public:
         return _mm_add_ps(result, mult);
     }
     
-    // TODO: Transform (multiply by transform matrix)
+    // Transform (multiply by transform matrix)
+    void Transform(const Matrix4& mat);
     
-    // TODO: Transform as Vector (multiply by transform matrix & set w to 0f)
+    // Transform as Vector (multiply by transform matrix & set w to 0f)
+    void TransformAsVector(const Matrix4& mat);
     
     // TODO: Rotate (multiply by quaternion)
+    friend class Matrix4;
     
     static const Vector3 Zero;
     static const Vector3 UnitX;
